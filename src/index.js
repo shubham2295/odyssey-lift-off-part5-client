@@ -5,12 +5,12 @@ import Pages from './pages';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  uri: 'https://castronaut-gql-server.herokuapp.com/',
   cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  <ApolloProvider client={ client }>
     <GlobalStyles />
     <Pages />
   </ApolloProvider>,
